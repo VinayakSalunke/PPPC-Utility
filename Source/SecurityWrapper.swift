@@ -45,8 +45,7 @@ struct SecurityWrapper {
             } else {
                 let dict = [
                     kSecClass as String: kSecClassInternetPassword,
-                    kSecAttrServer as String: server,
-                    kSecAttrAccount as String: username
+                    kSecAttrServer as String: server
                 ] as CFDictionary
                 try execute { SecItemDelete(dict) }
             }

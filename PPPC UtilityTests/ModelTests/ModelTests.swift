@@ -185,7 +185,6 @@ class ModelTests: XCTestCase {
         }
     }
 
-    // swiftlint:disable:next function_body_length
     func testExportProfileWithAppleEventsAndLegacyAllowed() {
         // given
         let exe1 = Executable(identifier: "one", codeRequirement: "oneReq")

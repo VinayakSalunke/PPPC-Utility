@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,7 +27,6 @@
 		6E651CC82314397D001CC974 /* FlippedClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E651CC72314397D001CC974 /* FlippedClipView.swift */; };
 		6E651CCA231439CE001CC974 /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E651CC9231439CE001CC974 /* InfoButton.swift */; };
 		6EB45830214FFCCB00BE5749 /* AppleEventRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB4582F214FFCCB00BE5749 /* AppleEventRule.swift */; };
-		6EB86F692151476500FBE634 /* JamfProClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB86F682151476500FBE634 /* JamfProClient.swift */; };
 		6EC409DE214D65BC00BE4F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC409DD214D65BC00BE4F17 /* AppDelegate.swift */; };
 		6EC409E2214D65BD00BE4F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC409E1214D65BD00BE4F17 /* Assets.xcassets */; };
 		6EC409E5214D65BD00BE4F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC409E3214D65BD00BE4F17 /* Main.storyboard */; };
@@ -37,15 +36,28 @@
 		6EC40A12214DF8FE00BE4F17 /* SecurityWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC40A11214DF8FE00BE4F17 /* SecurityWrapper.swift */; };
 		6EC40A14214DFB5800BE4F17 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC40A13214DFB5800BE4F17 /* Model.swift */; };
 		6EC40A16214ECF1E00BE4F17 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC40A15214ECF1E00BE4F17 /* SaveViewController.swift */; };
-		6EC40A18214ECF2C00BE4F17 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC40A17214ECF2C00BE4F17 /* UploadViewController.swift */; };
 		6EC40A1C214EF87800BE4F17 /* SigningIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC40A1B214EF87800BE4F17 /* SigningIdentity.swift */; };
 		71061E54246106C800822D35 /* LoadExecutableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71061E53246106C800822D35 /* LoadExecutableError.swift */; };
 		B5E09548250BCCFC00A40409 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E09547250BCCFC00A40409 /* Alert.swift */; };
+		C01BEDBA28636F57001B0B3B /* SemanticVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BEDB928636F57001B0B3B /* SemanticVersionTests.swift */; };
+		C03270BA28636330008B38E0 /* SemanticVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03270B928636330008B38E0 /* SemanticVersion.swift */; };
+		C03270C028636397008B38E0 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03270BE28636397008B38E0 /* Networking.swift */; };
+		C03270C128636397008B38E0 /* JamfProAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03270BF28636397008B38E0 /* JamfProAPIClient.swift */; };
+		C05844B82AD4512D00141353 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05844B72AD4512D00141353 /* Token.swift */; };
+		C05844BE2AD45F7900141353 /* UploadInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05844BD2AD45F7900141353 /* UploadInfoView.swift */; };
+		C07961E228749A36007B98A7 /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07961E128749A36007B98A7 /* TokenTests.swift */; };
+		C07961E428749A51007B98A7 /* NetworkAuthManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07961E328749A51007B98A7 /* NetworkAuthManagerTests.swift */; };
+		C07B1FB82AF596D80075E38B /* UploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B1FB72AF596D80075E38B /* UploadManager.swift */; };
+		C0A2B5422B1A5D5C0007F510 /* JamfProAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2B5412B1A5D5C0007F510 /* JamfProAPIClientTests.swift */; };
 		C0A85DB5279873C600086283 /* TestTCCUnsignedProfile-allLower.mobileconfig in Resources */ = {isa = PBXBuildFile; fileRef = C0A85DB4279873C600086283 /* TestTCCUnsignedProfile-allLower.mobileconfig */; };
 		C0E0383F27A30C7100A23FA2 /* PPPCServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E0383D27A30C7100A23FA2 /* PPPCServiceInfo.swift */; };
 		C0E0384027A30C7100A23FA2 /* PPPCServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E0383E27A30C7100A23FA2 /* PPPCServicesManager.swift */; };
 		C0E0384227A30D1D00A23FA2 /* PPPCServices.json in Resources */ = {isa = PBXBuildFile; fileRef = C0E0384127A30D1D00A23FA2 /* PPPCServices.json */; };
 		C0E0384427A30D6B00A23FA2 /* PPPCServicesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E0384327A30D6B00A23FA2 /* PPPCServicesManagerTests.swift */; };
+		C0EE9A7D28639BF800738B6B /* TestTCCProfileForJamfProAPI.txt in Resources */ = {isa = PBXBuildFile; fileRef = C0EE9A7C28639BF800738B6B /* TestTCCProfileForJamfProAPI.txt */; };
+		C0EE9A7F2863BDE300738B6B /* JamfProAPITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE9A7E2863BDE300738B6B /* JamfProAPITypes.swift */; };
+		C0EE9A812863BE2B00738B6B /* NetworkAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE9A802863BE2B00738B6B /* NetworkAuthManager.swift */; };
+		C0EE9A832863BEEB00738B6B /* URLSessionAsyncCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE9A822863BEEB00738B6B /* URLSessionAsyncCompatibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +95,6 @@
 		6E95730721553B650002C30B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6E957309215557870002C30B /* PPPC Utility.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PPPC Utility.entitlements"; sourceTree = "<group>"; };
 		6EB4582F214FFCCB00BE5749 /* AppleEventRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleEventRule.swift; sourceTree = "<group>"; };
-		6EB86F682151476500FBE634 /* JamfProClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamfProClient.swift; sourceTree = "<group>"; };
 		6EC409DA214D65BC00BE4F17 /* PPPC Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPPC Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC409DD214D65BC00BE4F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EC409E1214D65BD00BE4F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,16 +106,29 @@
 		6EC40A11214DF8FE00BE4F17 /* SecurityWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityWrapper.swift; sourceTree = "<group>"; };
 		6EC40A13214DFB5800BE4F17 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6EC40A15214ECF1E00BE4F17 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
-		6EC40A17214ECF2C00BE4F17 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		6EC40A1B214EF87800BE4F17 /* SigningIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningIdentity.swift; sourceTree = "<group>"; };
 		71061E53246106C800822D35 /* LoadExecutableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadExecutableError.swift; sourceTree = "<group>"; };
 		97227C6726248CD7000F26C1 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B5E09547250BCCFC00A40409 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C01BEDB928636F57001B0B3B /* SemanticVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticVersionTests.swift; sourceTree = "<group>"; };
+		C03270B928636330008B38E0 /* SemanticVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticVersion.swift; sourceTree = "<group>"; };
+		C03270BE28636397008B38E0 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		C03270BF28636397008B38E0 /* JamfProAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JamfProAPIClient.swift; sourceTree = "<group>"; };
+		C05844B72AD4512D00141353 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		C05844BD2AD45F7900141353 /* UploadInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadInfoView.swift; sourceTree = "<group>"; };
+		C07961E128749A36007B98A7 /* TokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
+		C07961E328749A51007B98A7 /* NetworkAuthManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAuthManagerTests.swift; sourceTree = "<group>"; };
+		C07B1FB72AF596D80075E38B /* UploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadManager.swift; sourceTree = "<group>"; };
+		C0A2B5412B1A5D5C0007F510 /* JamfProAPIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JamfProAPIClientTests.swift; sourceTree = "<group>"; };
 		C0A85DB4279873C600086283 /* TestTCCUnsignedProfile-allLower.mobileconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "TestTCCUnsignedProfile-allLower.mobileconfig"; sourceTree = "<group>"; };
 		C0E0383D27A30C7100A23FA2 /* PPPCServiceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPPCServiceInfo.swift; sourceTree = "<group>"; };
 		C0E0383E27A30C7100A23FA2 /* PPPCServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPPCServicesManager.swift; sourceTree = "<group>"; };
 		C0E0384127A30D1D00A23FA2 /* PPPCServices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PPPCServices.json; sourceTree = "<group>"; };
 		C0E0384327A30D6B00A23FA2 /* PPPCServicesManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPPCServicesManagerTests.swift; sourceTree = "<group>"; };
+		C0EE9A7C28639BF800738B6B /* TestTCCProfileForJamfProAPI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTCCProfileForJamfProAPI.txt; sourceTree = "<group>"; };
+		C0EE9A7E2863BDE300738B6B /* JamfProAPITypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JamfProAPITypes.swift; sourceTree = "<group>"; };
+		C0EE9A802863BE2B00738B6B /* NetworkAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAuthManager.swift; sourceTree = "<group>"; };
+		C0EE9A822863BEEB00738B6B /* URLSessionAsyncCompatibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionAsyncCompatibility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +172,7 @@
 			children = (
 				5F90EBE32319992B00738D09 /* ModelTests.swift */,
 				C0E0384327A30D6B00A23FA2 /* PPPCServicesManagerTests.swift */,
+				C01BEDB928636F57001B0B3B /* SemanticVersionTests.swift */,
 			);
 			path = ModelTests;
 			sourceTree = "<group>";
@@ -176,13 +201,14 @@
 			children = (
 				5901A2752534DEFF00A1CD2F /* Helpers */,
 				5F90EBE22319991600738D09 /* ModelTests */,
-				5F95AE272315B069002E0A22 /* TCCProfileImporter */,
+				5F95AE272315B069002E0A22 /* TCCProfileImporterTests */,
+				C07961E028749A36007B98A7 /* NetworkingTests */,
 				5F95AE1F2315A6AD002E0A22 /* Info.plist */,
 			);
 			path = "PPPC UtilityTests";
 			sourceTree = "<group>";
 		};
-		5F95AE272315B069002E0A22 /* TCCProfileImporter */ = {
+		5F95AE272315B069002E0A22 /* TCCProfileImporterTests */ = {
 			isa = PBXGroup;
 			children = (
 				5F95AE2B2315B172002E0A22 /* TestTCCProfileSigned-Broken.mobileconfig */,
@@ -190,10 +216,11 @@
 				5F95AE2A2315B172002E0A22 /* TestTCCUnsignedProfile-Broken.mobileconfig */,
 				5F95AE2C2315B172002E0A22 /* TestTCCUnsignedProfile-Empty.mobileconfig */,
 				5F95AE292315B172002E0A22 /* TestTCCUnsignedProfile.mobileconfig */,
+				C0EE9A7C28639BF800738B6B /* TestTCCProfileForJamfProAPI.txt */,
 				5F95AE252315A7CB002E0A22 /* TCCProfileImporterTests.swift */,
 				59206D6825265F0C00B94795 /* TCCProfileTests.swift */,
 			);
-			path = TCCProfileImporter;
+			path = TCCProfileImporterTests;
 			sourceTree = "<group>";
 		};
 		6E651CC623143969001CC974 /* Views */ = {
@@ -233,11 +260,12 @@
 			isa = PBXGroup;
 			children = (
 				6EC409DD214D65BC00BE4F17 /* AppDelegate.swift */,
-				6EB86F682151476500FBE634 /* JamfProClient.swift */,
 				6EC40A11214DF8FE00BE4F17 /* SecurityWrapper.swift */,
 				6E651CC623143969001CC974 /* Views */,
 				6EC40A1E214EF89600BE4F17 /* View Controllers */,
+				C05844BC2AD45F7900141353 /* SwiftUI */,
 				6EC40A1D214EF87E00BE4F17 /* Model */,
+				C03270BD28636397008B38E0 /* Networking */,
 				5F95AE0B23158AB5002E0A22 /* TCCProfileImporter */,
 				5F90EBDB2319931100738D09 /* Extensions */,
 			);
@@ -266,6 +294,7 @@
 				C0E0383D27A30C7100A23FA2 /* PPPCServiceInfo.swift */,
 				C0E0383E27A30C7100A23FA2 /* PPPCServicesManager.swift */,
 				6EC40A1B214EF87800BE4F17 /* SigningIdentity.swift */,
+				C03270B928636330008B38E0 /* SemanticVersion.swift */,
 				6EC409F4214D95D200BE4F17 /* TCCProfile.swift */,
 			);
 			path = Model;
@@ -276,10 +305,41 @@
 			children = (
 				6EC409F2214D8FFA00BE4F17 /* TCCProfileViewController.swift */,
 				6EC40A15214ECF1E00BE4F17 /* SaveViewController.swift */,
-				6EC40A17214ECF2C00BE4F17 /* UploadViewController.swift */,
 				6E6216F8215321CE0043DF18 /* OpenViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C03270BD28636397008B38E0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C0EE9A802863BE2B00738B6B /* NetworkAuthManager.swift */,
+				C03270BE28636397008B38E0 /* Networking.swift */,
+				C07B1FB72AF596D80075E38B /* UploadManager.swift */,
+				C03270BF28636397008B38E0 /* JamfProAPIClient.swift */,
+				C0EE9A7E2863BDE300738B6B /* JamfProAPITypes.swift */,
+				C05844B72AD4512D00141353 /* Token.swift */,
+				C0EE9A822863BEEB00738B6B /* URLSessionAsyncCompatibility.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C05844BC2AD45F7900141353 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				C05844BD2AD45F7900141353 /* UploadInfoView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		C07961E028749A36007B98A7 /* NetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0A2B5412B1A5D5C0007F510 /* JamfProAPIClientTests.swift */,
+				C07961E328749A51007B98A7 /* NetworkAuthManagerTests.swift */,
+				C07961E128749A36007B98A7 /* TokenTests.swift */,
+			);
+			path = NetworkingTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +438,7 @@
 				5F95AE312315B172002E0A22 /* TestTCCUnsignedProfile-Empty.mobileconfig in Resources */,
 				5F95AE2F2315B172002E0A22 /* TestTCCUnsignedProfile-Broken.mobileconfig in Resources */,
 				C0A85DB5279873C600086283 /* TestTCCUnsignedProfile-allLower.mobileconfig in Resources */,
+				C0EE9A7D28639BF800738B6B /* TestTCCProfileForJamfProAPI.txt in Resources */,
 				5F95AE302315B172002E0A22 /* TestTCCProfileSigned-Broken.mobileconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +458,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		49DB95D624991AA800F433CA /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -420,8 +482,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07961E228749A36007B98A7 /* TokenTests.swift in Sources */,
 				34DED4D423FDCAFD00C53FB9 /* SwiftyCMSDecoder.swift in Sources */,
+				C0A2B5422B1A5D5C0007F510 /* JamfProAPIClientTests.swift in Sources */,
+				C07961E428749A51007B98A7 /* NetworkAuthManagerTests.swift in Sources */,
 				5F95AE262315A7CB002E0A22 /* TCCProfileImporterTests.swift in Sources */,
+				C01BEDBA28636F57001B0B3B /* SemanticVersionTests.swift in Sources */,
 				59206D6925265F0C00B94795 /* TCCProfileTests.swift in Sources */,
 				5901A2772534DF1400A1CD2F /* ModelBuilder.swift in Sources */,
 				59798B82252D16310070A204 /* TCCProfileBuilder.swift in Sources */,
@@ -437,15 +503,17 @@
 				34DED4D623FDDB2B00C53FB9 /* TCCProfileConfigurationPanel.swift in Sources */,
 				5F90EBE12319970500738D09 /* TCCProfileImporter.swift in Sources */,
 				5F95AE1623158F03002E0A22 /* SwiftyCMSDecoder.swift in Sources */,
+				C03270C028636397008B38E0 /* Networking.swift in Sources */,
 				B5E09548250BCCFC00A40409 /* Alert.swift in Sources */,
-				6EB86F692151476500FBE634 /* JamfProClient.swift in Sources */,
 				5F90EBDD2319934F00738D09 /* ArrayExtensions.swift in Sources */,
 				6EC40A14214DFB5800BE4F17 /* Model.swift in Sources */,
 				71061E54246106C800822D35 /* LoadExecutableError.swift in Sources */,
 				C0E0383F27A30C7100A23FA2 /* PPPCServiceInfo.swift in Sources */,
+				C0EE9A7F2863BDE300738B6B /* JamfProAPITypes.swift in Sources */,
 				6EC40A1C214EF87800BE4F17 /* SigningIdentity.swift in Sources */,
-				6EC40A18214ECF2C00BE4F17 /* UploadViewController.swift in Sources */,
+				C03270C128636397008B38E0 /* JamfProAPIClient.swift in Sources */,
 				C0E0384027A30C7100A23FA2 /* PPPCServicesManager.swift in Sources */,
+				C07B1FB82AF596D80075E38B /* UploadManager.swift in Sources */,
 				6E651CCA231439CE001CC974 /* InfoButton.swift in Sources */,
 				6EC409F5214D95D200BE4F17 /* TCCProfile.swift in Sources */,
 				6EC40A12214DF8FE00BE4F17 /* SecurityWrapper.swift in Sources */,
@@ -453,10 +521,15 @@
 				345B01D623FDBF55008838B6 /* TCCProfileExtensions.swift in Sources */,
 				6EC409F3214D8FFA00BE4F17 /* TCCProfileViewController.swift in Sources */,
 				6E6216F9215321CE0043DF18 /* OpenViewController.swift in Sources */,
+				C05844B82AD4512D00141353 /* Token.swift in Sources */,
 				6EC40A10214DE3B200BE4F17 /* Executable.swift in Sources */,
+				C0EE9A832863BEEB00738B6B /* URLSessionAsyncCompatibility.swift in Sources */,
+				C0EE9A812863BE2B00738B6B /* NetworkAuthManager.swift in Sources */,
 				6EC40A16214ECF1E00BE4F17 /* SaveViewController.swift in Sources */,
+				C05844BE2AD45F7900141353 /* UploadInfoView.swift in Sources */,
 				6EB45830214FFCCB00BE5749 /* AppleEventRule.swift in Sources */,
 				5F90EBDF2319970000738D09 /* TCCProfileImportError.swift in Sources */,
+				C03270BA28636330008B38E0 /* SemanticVersion.swift in Sources */,
 				6E651CC82314397D001CC974 /* FlippedClipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +629,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -581,7 +655,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IBSC_NOTICES = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -617,6 +691,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -636,7 +711,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IBSC_NOTICES = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

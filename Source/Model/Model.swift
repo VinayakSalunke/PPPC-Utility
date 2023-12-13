@@ -270,11 +270,9 @@ extension Model {
     }
 
     func getExecutablesFromAllPolicies(policies: [TCCPolicy]) {
-        for tccPolicy in policies {
-            if getExecutableFromSelectedExecutables(bundleIdentifier: tccPolicy.identifier) == nil {
-                let executable = getExecutableFrom(identifier: tccPolicy.identifier, codeRequirement: tccPolicy.codeRequirement)
-                self.selectedExecutables.append(executable)
-            }
+        for tccPolicy in policies where getExecutableFromSelectedExecutables(bundleIdentifier: tccPolicy.identifier) == nil {
+			let executable = getExecutableFrom(identifier: tccPolicy.identifier, codeRequirement: tccPolicy.codeRequirement)
+			self.selectedExecutables.append(executable)
         }
     }
 
@@ -300,16 +298,14 @@ extension Model {
     }
 
     private func findExecutableOnComputerUsing(bundleIdentifier: String, completion: @escaping LoadExecutableCompletion) {
-        var pathToLoad: String?
+		var urlToLoad: URL?
         if bundleIdentifier.contains("/") {
-            pathToLoad = bundleIdentifier
+			urlToLoad = URL(string: "file://\(bundleIdentifier)")
         } else {
-            if let path = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: bundleIdentifier) {
-                pathToLoad = path.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? path
-            }
+			urlToLoad = NSWorkspace.shared.urlForApplication(withBundleIdentifier: bundleIdentifier)
         }
 
-        if let pathForURL = pathToLoad, let fileURL = URL(string: "file://\(pathForURL)") {
+		if let fileURL = urlToLoad {
             self.loadExecutable(url: fileURL) { result in
                 switch result {
                 case .success(let executable):

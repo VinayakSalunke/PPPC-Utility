@@ -154,6 +154,43 @@ public struct TCCProfile: Codable {
         encoder.outputFormat = .xml
         return try encoder.encode(self)
     }
+
+    /// Wraps the ``TCCProfile`` in the XML tags for upload to the Jamf Pro API.
+    /// - Parameters:
+    ///   - signingIdentity: A signing identity; can be nil to leave the profile unsigned.
+    ///   - site: A Jamf Pro site
+    /// - Returns: XML data for use with the Jamf Pro API.
+    func jamfProAPIData(signingIdentity: SecIdentity?, site: (String, String)?) throws -> Data {
+        var profileText: String
+        var profileData = try xmlData()
+        if let identity = signingIdentity {
+            profileData = try SecurityWrapper.sign(data: profileData, using: identity)
+        }
+        profileText = String(data: profileData, encoding: .utf8) ?? ""
+
+        let root = XMLElement(name: "os_x_configuration_profile")
+        let general = XMLElement(name: "general")
+        root.addChild(general)
+
+        let payloads = XMLElement(name: "payloads", stringValue: profileText)
+
+        general.addChild(payloads)
+
+        if let site = site {
+            let sites = XMLElement(name: "site")
+            let siteId = XMLElement(name: "id", stringValue: site.0)
+            let siteName = XMLElement(name: "name", stringValue: site.1)
+            sites.addChild(siteId)
+            sites.addChild(siteName)
+            general.addChild(sites)
+        }
+
+        general.addChild(XMLElement(name: "name", stringValue: displayName))
+        general.addChild(XMLElement(name: "description", stringValue: payloadDescription))
+
+        let xml = XMLDocument(rootElement: root)
+        return xml.xmlData
+    }
 }
 
 enum ServicesKeys: String {

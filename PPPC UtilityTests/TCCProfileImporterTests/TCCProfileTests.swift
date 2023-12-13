@@ -146,7 +146,7 @@ class TCCProfileTests: XCTestCase {
 
     // unit tests for handling both Auth and allowed keys should fail?
 
-    func testSettingLegacyAllowValueNullifiesAuthorization() {
+    func testSettingLegacyAllowValueNullifiesAuthorization() throws {
         // given
         var tccPolicy = TCCPolicy(identifier: "id", codeRequirement: "req", receiverIdentifier: "recId", receiverCodeRequirement: "recreq")
         tccPolicy.authorization = .allow
@@ -156,7 +156,7 @@ class TCCProfileTests: XCTestCase {
 
         // then
         XCTAssertNil(tccPolicy.authorization)
-        XCTAssertTrue(tccPolicy.allowed!)
+        XCTAssertTrue(try XCTUnwrap(tccPolicy.allowed))
     }
 
     func testSettingAuthorizationValueDoesNotNullifyAllowed() {
@@ -172,4 +172,25 @@ class TCCProfileTests: XCTestCase {
         XCTAssertEqual(tccPolicy.authorization, TCCPolicyAuthorizationValue.allowStandardUserToSetSystemService)
     }
 
+    func testJamfProAPIData() throws {
+        // given - build the test profile
+        let tccProfile = TCCProfileBuilder().buildProfile(allowed: false, authorization: .allow)
+        let expected = try loadTextFile(fileName: "TestTCCProfileForJamfProAPI").trimmingCharacters(in: .whitespacesAndNewlines)
+
+        // when - wrap in Jamf Pro API xml
+        let data = try tccProfile.jamfProAPIData(signingIdentity: nil, site: nil)
+
+        // then
+        let xmlString = String(data: data, encoding: .utf8)
+        XCTAssertEqual(xmlString, expected)
+    }
+
+    private func loadTextFile(fileName: String) throws -> String {
+        let testBundle = Bundle(for: type(of: self))
+        guard let resourceURL = testBundle.url(forResource: fileName, withExtension: "txt") else {
+            XCTFail("Resource file should exists")
+            return ""
+        }
+        return try String(contentsOf: resourceURL)
+    }
 }

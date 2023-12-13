@@ -71,7 +71,7 @@ public extension TCCProfile {
 
         // This block looks for the given coding key within a property list XML string and
         // converts it to the standard letter case.
-        let conversionBlock = { (codingKey: CodingKey) -> Void in
+        let conversionBlock = { (codingKey: CodingKey) in
             let requiredString = ">\(codingKey.stringValue)<"
             newString = newString.replacingOccurrences(of: requiredString,
                                                        with: requiredString,

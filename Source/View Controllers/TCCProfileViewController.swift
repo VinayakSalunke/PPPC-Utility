@@ -26,6 +26,8 @@
 //
 
 import Cocoa
+import os.log
+import SwiftUI
 
 enum TCCProfileDisplayValue: String {
     case allow = "Allow"
@@ -174,6 +176,24 @@ class TCCProfileViewController: NSViewController {
         toggleAuthorizationKey(theSwitch: sender, showAlert: true)
     }
 
+	@IBAction func uploadAction(_ sender: NSButton) {
+		let identities: [SigningIdentity]
+		do {
+			identities = try SecurityWrapper.loadSigningIdentities()
+		} catch {
+			identities = []
+			os_log("Error loading identities: %s", type: .error, error.localizedDescription)
+		}
+
+		let uploadView = UploadInfoView(signingIdentities: identities) {
+			// Dismiss the sheet when the UploadInfoView decides it is done
+			if let controller = self.presentedViewControllers?.first {
+				self.dismiss(controller)
+			}
+		}
+		self.presentAsSheet(NSHostingController(rootView: uploadView))
+	}
+
     fileprivate func showAlert(_ error: LocalizedError, for window: NSWindow) {
         let alertWindow: NSAlert = NSAlert()
         alertWindow.messageText = "Operation Failed"
@@ -215,7 +235,7 @@ class TCCProfileViewController: NSViewController {
     func promptForExecutables(_ block: @escaping (Executable) -> Void) {
         let panel = NSOpenPanel()
         panel.allowsMultipleSelection = true
-        panel.allowedFileTypes = [ kUTTypeBundle, kUTTypeExecutable ] as [String]
+        panel.allowedFileTypes = [ kUTTypeBundle, kUTTypeUnixExecutable ] as [String]
         panel.directoryURL = URL(fileURLWithPath: "/Applications", isDirectory: true)
         guard let window = self.view.window else {
             return
@@ -243,7 +263,7 @@ class TCCProfileViewController: NSViewController {
     }
 
     let pasteboardOptions: [NSPasteboard.ReadingOptionKey: Any] = [
-        .urlReadingContentsConformToTypes: [ kUTTypeBundle, kUTTypeExecutable ]
+        .urlReadingContentsConformToTypes: [ kUTTypeBundle, kUTTypeUnixExecutable ]
     ]
 
     @IBAction func checkForAuthorizationFeaturesUsed(_ sender: NSPopUpButton) {
